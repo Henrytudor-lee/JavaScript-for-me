@@ -19,4 +19,3 @@
     }
     let num1=getNum(45,87)
     document.write(num1)
-   
