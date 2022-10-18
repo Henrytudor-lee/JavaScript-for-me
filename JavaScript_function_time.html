@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            color: red;
+            font-size: 20px;
+            line-height: 100px;
+            font-size: 50px;
+            text-align: center;
+        }
+        span{
+            line-height: 50px;
+            font-size: 50px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="time1"></div>
+    <!-- 这里注意要写入的是通过ID进行精准定位进行写入，不要混乱弄成class -->
+    <span>天</span>
+    <div id="time2"></div>
+    <span>时</span>
+    <div id="time3"></div>
+    <span>分</span>
+    <div id="time4"></div>
+    <span>秒</span>
+    <script src="./time.js">
+        // TimeDown('time1','time2','time3','time4','2022-12-30 8:00:00');  //函数的调用写在引用JS的script中无法运行
+        //  script引用的位置若是放在body前侧则可能会出现Cannot set property 'innerHTML' of null,意义着函数中的参数并未找到写入的位置
+    </script>   
+    <script>
+        TimeDown('time1','time2','time3','time4','2022-12-30 8:00:00'); // 这里极其注意函数括号内的实参书写要加引号
+
+    </script>
+
+</body>
+</html>
