@@ -1,0 +1,18 @@
+//leetcode  --- 412.FizzBuzz  ---  easy
+//比较简单的，直接if判断逐个拆解就行，目前暂未想到还有其他哪个地方还能优化。
+function num(n) {
+    let arr = []
+    for(let i = 0;i <= n;i++){
+        // if(i % 3 == 0 && i % 5 == 0){   
+        if(i % 15 == 0){   //优化为15的倍数
+            arr.push('FizzBuzz')
+        }else if(i % 3 == 0){
+            arr.push('Fizz')
+        }else if(i % 5 == 0){
+            arr.push('Buzz')
+        }else{
+            arr.push(String(i))
+        }
+    }
+    return arr
+}
